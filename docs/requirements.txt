@@ -1,0 +1,10 @@
+# Install the jupyterhub-pytest-plugin package to help autodoc-traits inspect and generate documentation.
+#    pip install -r docs/requirements.txt
+#
+--editable .
+
+autodoc-traits
+myst-parser
+pydata-sphinx-theme
+sphinx
+sphinx-copybutton
