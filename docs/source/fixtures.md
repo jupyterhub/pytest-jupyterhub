@@ -1,35 +1,32 @@
-# Fixtures
+# Fixtures and Mocks
+A **Fixture** is a function that is used to prepare and clean up the environment for a test function. Fixtures can be used to set up test data, test environment, and other resources that are needed by test functions.
+For more information, check out this [pytest documentation](https://docs.pytest.org/en/latest/explanation/fixtures.html) on fixtures.
 
-## The JupyterHub MockHub Class
-The `MockHub` class is a subclass of `JupyterHub`. It allows for easier testing of the `JupyterHub` class and other components that require a running instance of JupyterHub. It does this by providing mock implementations of particular functionality of a JupyterHub instance. It also allows for easier setup and cleanup of the testing environment.
+A **Mock** is an object that simulates the behavior of another object such as a class or function. They are used to simulate the behavior of real objects for testing purposes.
+For more information on Mocks, check out this [unittest documentation](https://docs.python.org/3/library/unittest.mock.html) on the mock module.
 
-To use the `MockHub` class, you would create an instance of it, and then call its methods or access its properties as needed.
+*Example:*
 
-**Example:**
-```
-mock_hub = MockHub()
-mock_hub.initialize()
-```
-This would create a new `MockHub` instance and initialize it. You could then use the instance to perform various operations, such as adding users or starting servers, by calling methods on the instance.
+The [init_db](https://github.com/jupyterhub/jupyterhub/blob/336d7cfcfaf74087e4ee467d5e3d3bec0c25c3d0/jupyterhub/app.py#L1804) function in JupyterHub's `app` module initializes a connection to a database using SQLAlchemy's ORM (Object-Relational Mapper).
+However, the mock [init_db](https://github.com/jupyterhub/jupyterhub/blob/336d7cfcfaf74087e4ee467d5e3d3bec0c25c3d0/jupyterhub/tests/mocking.py#L295) function in JupyterHub's `mocking` module initializes a database connection for the mocked JupyterHub application instance by calling the `init_db` function of the JupyterHub superclass but also has a `test_clean_db` attribute to ensure that the database is reset to a clean state before running tests.
 
-## The JupyterHub App Fixture
-The `app` fixture is used to provide a mock `JupyterHub` application instance for testing. The mock `JupyterHub` application instance is created using the `MockHub` class. The fixture is defined with `scope='module'`, meaning that it will be created once per test module and shared among all tests within the module. It takes a keyword argument `ssl_enabled`, which determines whether the mock `JupyterHub` application instance should be started with SSL enabled. It is also responsible for starting the mock `JupyterHub` application instance and stopping it after all tests in the module have been completed. 
-
-The `app` fixture is used in a test module by including it as an argument in the test function or method. When the test function is executed, the `app` fixture will be called and the mock JupyterHub application instance will be passed as an argument to the test function. This allows the test function to use the mock JupyterHub application instance to perform assertions or other operations as part of the test.
+**[JupyterHub MockHub Class](https://github.com/jupyterhub/jupyterhub/blob/e4f72c9eeb4cd308ff5cbcf21142b2cb0a0345e4/jupyterhub/tests/mocking.py#L220)**: 
+It is a subclass of `JupyterHub` that allows for easier testing of the `JupyterHub` class and other components that require a running instance of JupyterHub. It does this by providing mock implementations of particular functionality of a JupyterHub instance. It also allows for easier setup and cleanup of the testing environment.
 
 **Example:**
-```
-def test_something(app):
-    # Use the mock JupyterHub application instance to perform some operation
-    result = app.do_something()
-    
-    # Assert that the result is as expected
-    assert result == expected_result
-```
 
-## Their usage outside the JupyterHub repository
-The `conftest` module of the `DockerSpawner` repository imports and uses the JupyterHub `MockHub` class. It sets the `hub_ip` and `hub_connect_ip` attributes of the mocked instance. These attributes specify the IP addresses that the mock instance of JupyterHub will be listening in on and connecting to.
+The `conftest` module of the `DockerSpawner` repository imports and uses the JupyterHub `MockHub` class. This can be seen [here](https://github.com/jupyterhub/dockerspawner/blob/8503af69161a3a543cc613f93ce7951ad30a1912/tests/conftest.py#L26).
 
-The `conftest` module of the `DockerSpawner` repository also imports and uses the JupyterHub `app` fixture. It configures the mocked app instance to use the `DockerSpawner` class and its sub-classes: `SwarmSpawner` and `SystemUserSpawner`, to spawn single-user servers.
+It sets the `hub_ip` and `hub_connect_ip` attributes of the mocked instance.
+These attributes specify the IP addresses that the mock instance of JupyterHub will be listening in on and connecting to.
+
+**[JupyterHub App Fixture](https://github.com/jupyterhub/jupyterhub/blob/e4f72c9eeb4cd308ff5cbcf21142b2cb0a0345e4/jupyterhub/tests/conftest.py#L61)**:
+It is used to provide a mock `JupyterHub` application instance for testing. It is also responsible for starting the mock `JupyterHub` application instance and stopping it after all tests in the module have been completed.
+
+**Example:**
+
+The `conftest` module of the `DockerSpawner` repository imports and uses the JupyterHub `app` fixture. This can be seen [here](https://github.com/jupyterhub/dockerspawner/blob/8503af69161a3a543cc613f93ce7951ad30a1912/tests/conftest.py#L60).
+
+It configures the mocked app instance to use the `DockerSpawner` class and its sub-classes: `SwarmSpawner` and `SystemUserSpawner`, to spawn single-user servers.
 
 The `MockHub` class and the `app` fixture of the `JupyterHub` repository and the fixtures they rely on i.e: `event_loop`, `io_loop`, `ssl_tmpdir`, should be included in the **JupyterHub Pytest Plugin** to enable for testing of the DockerSpawner and other JupyterHub component implementations without having to import them from the JupyterHub repository.
