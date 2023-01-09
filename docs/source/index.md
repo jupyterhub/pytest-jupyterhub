@@ -8,7 +8,7 @@ JupyterHub is a modular and extensible project, with components, like the proxy,
 
 Each of these hub components and the hub itself define their own testing infrastructure, building everything from the ground up using the pytest framework. And some of this complex work is either repetitive across JupyterHub sub-projects, or under-specified for some of them. This sparked a need to abstract these common parts into a separate testing framework.
 
-The goal is to provide importable testing utilities to make it easier for contributors to write tests for the various hub components.
+The goal is to provide importable testing utilities to make it easier for contributors to write tests for the various hub components. This will involve creating and using **fixtures** and **mocks**.
 
 ```{toctree}
 :maxdepth: 2
