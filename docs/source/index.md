@@ -12,13 +12,8 @@ The goal is to provide importable testing utilities to make it easier for contri
 
 ```{toctree}
 :maxdepth: 2
-:caption: Contents
-docs
-```
-
-```{toctree}
-:maxdepth: 2
-:caption: Reference
+:caption: Table of Contents
+fixtures
 changelog
 ```
 
