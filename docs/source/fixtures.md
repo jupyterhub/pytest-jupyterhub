@@ -10,8 +10,9 @@ It sets the `hub_ip` and `hub_connect_ip` attributes of the mocked instance.
 These attributes specify the IP addresses that the mock instance of JupyterHub will be listening in on and connecting to.
 ```
 
+(jupyterhub-app-fixture)=
 ## [The App Fixture](https://github.com/jupyterhub/jupyterhub/blob/e4f72c9eeb4cd308ff5cbcf21142b2cb0a0345e4/jupyterhub/tests/conftest.py#L61)
-It is used to provide a mock `JupyterHub` application instance for testing. The `app` [fixture](https://docs.pytest.org/en/latest/explanation/fixtures.html) is also responsible for starting the mock `JupyterHub` application instance and stopping it after all tests in the module have been completed.
+The `app` [fixture](https://docs.pytest.org/en/latest/explanation/fixtures.html) is used to provide a lightweight, running `JupyterHub` application for testing. It is responsible for starting the mock `JupyterHub` application instance, the [MockHub](jupyterhub-mockhub) and stopping it after all tests in the module have been completed.
 ```{admonition} Example
 The `conftest` module of the `DockerSpawner` repository imports and uses the JupyterHub `app` fixture. This can be seen [here](https://github.com/jupyterhub/dockerspawner/blob/8503af69161a3a543cc613f93ce7951ad30a1912/tests/conftest.py#L60).
 
