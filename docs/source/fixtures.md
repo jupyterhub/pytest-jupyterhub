@@ -1,5 +1,6 @@
 # Fixtures and Mocks of the `jupyterhub` package
 
+(jupyterhub-mockhub)=
 ## [The MockHub Class](https://github.com/jupyterhub/jupyterhub/blob/e4f72c9eeb4cd308ff5cbcf21142b2cb0a0345e4/jupyterhub/tests/mocking.py#L220) 
 It is a subclass of `JupyterHub` that allows for easier testing of the `JupyterHub` class and other components that require a running instance of JupyterHub. It does this by providing [mock](https://docs.python.org/3/library/unittest.mock.html) implementations of particular functionality of a JupyterHub instance. It also allows for easier setup and cleanup of the testing environment.
 ```{admonition} Example
