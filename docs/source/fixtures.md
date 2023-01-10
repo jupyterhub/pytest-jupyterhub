@@ -1,4 +1,4 @@
-# Fixtures and Mocks
+# Fixtures and Mocks of the `jupyterhub` package
 A **Fixture** is a function that is used to prepare and clean up the environment for a test function. Fixtures can be used to set up test data, test environment, and other resources that are needed by test functions.
 For more information, check out this [pytest documentation](https://docs.pytest.org/en/latest/explanation/fixtures.html) on fixtures.
 
