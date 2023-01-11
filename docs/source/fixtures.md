@@ -2,7 +2,7 @@
 
 (jupyterhub-mockhub)=
 ## [The MockHub Class](https://github.com/jupyterhub/jupyterhub/blob/e4f72c9eeb4cd308ff5cbcf21142b2cb0a0345e4/jupyterhub/tests/mocking.py#L220) 
-It is a subclass of `JupyterHub` that allows for easier testing of the `JupyterHub` class and other components that require a running instance of JupyterHub. It does this by providing [mock](https://docs.python.org/3/library/unittest.mock.html) implementations of particular functionality of a JupyterHub instance. It also allows for easier setup and cleanup of the testing environment.
+It is a subclass of `JupyterHub` that allows for easier testing of the `JupyterHub` class and other components that require a running instance of JupyterHub. It does this by providing [mock](https://docs.python.org/3/library/unittest.mock.html) implementations of specific functions of a JupyterHub instance, sometimes modified for testing purposes. For example,  the `init_db` function initializes the MockHub database by first resetting it to a clean state before running tests, the `initialize` function initializes the MockHub application and adds an initial user to the database to run tests against, the `stop` function stops the MockHub application and performs any necessary cleanup of the testing environment etc
 ```{admonition} Example
 The `conftest` module of the `DockerSpawner` repository imports and uses the JupyterHub `MockHub` class. This can be seen [here](https://github.com/jupyterhub/dockerspawner/blob/8503af69161a3a543cc613f93ce7951ad30a1912/tests/conftest.py#L26).
 
