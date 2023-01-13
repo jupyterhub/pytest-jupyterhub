@@ -11,7 +11,7 @@ build-backend = "hatchling.build"
 # - ref 2: https://hatch.pypa.io/latest/config/metadata/#project-metadata
 #
 [project]
-name = "jupyterhub-pytest-plugin"
+name = "pytest-jupyterhub"
 description = "A reusable JupyterHub pytest plugin"
 readme = "README.md"
 requires-python = ">=3.8"
@@ -41,9 +41,9 @@ test = [
 ]
 
 [project.urls]
-Documentation = "https://jupyterhub-pytest-plugin.readthedocs.io"
-Source = "https://github.com/jupyterhub/jupyterhub-pytest-plugin"
-Issues = "https://github.com/jupyterhub/jupyterhub-pytest-plugin/issues"
+Documentation = "https://pytest-jupyterhub.readthedocs.io"
+Source = "https://github.com/jupyterhub/pytest-jupyterhub"
+Issues = "https://github.com/jupyterhub/pytest-jupyterhub/issues"
 
 
 # black is used for autoformatting Python code
@@ -65,7 +65,7 @@ target_version = [
 # hatch ref: https://hatch.pypa.io/latest/
 #
 [tool.hatch.version]
-path = "jupyterhub-pytest-plugin/_version.py"
+path = "pytest-jupyterhub/_version.py"
 
 
 # isort is used for autoformatting Python code
@@ -93,7 +93,7 @@ norecursedirs = "lib lib64"
 # ref: https://github.com/your-tools/tbump#readme
 #
 [tool.tbump]
-github_url = "https://github.com/jupyterhub/jupyterhub-pytest-plugin"
+github_url = "https://github.com/jupyterhub/pytest-jupyterhub"
 
 [tool.tbump.version]
 current = "0.0.1.dev0"
@@ -113,4 +113,4 @@ message_template = "Bump to {new_version}"
 tag_template = "{new_version}"
 
 [[tool.tbump.file]]
-src = "jupyterhub-pytest-plugin/_version.py"
+src = "pytest-jupyterhub/_version.py"
