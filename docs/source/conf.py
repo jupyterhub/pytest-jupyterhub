@@ -20,7 +20,7 @@ import datetime
 
 # -- Project information -----------------------------------------------------
 
-project = "jupyterhub-pytest-plugin"
+project = "pytest-jupyterhub"
 copyright = f"{datetime.date.today().year}, Project Jupyter Contributors"
 author = "Project Jupyter Contributors"
 
@@ -65,12 +65,12 @@ source_suffix = [".md"]
 # Update the following section with the desired html theme if needed
 html_theme = "pydata_sphinx_theme"
 html_theme_options = {
-    "github_url": "https://github.com/jupyterhub/jupyterhub-pytest-plugin/",
+    "github_url": "https://github.com/jupyterhub/pytest-jupyterhub/",
     "use_edit_page_button": True,
 }
 html_context = {
     "github_user": "jupyterhub",
-    "github_repo": "jupyterhub-pytest-plugin",
+    "github_repo": "pytest-jupyterhub",
     "github_version": "main",
     "doc_path": "docs/source",
 }
