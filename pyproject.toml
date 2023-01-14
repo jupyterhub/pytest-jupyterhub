@@ -45,6 +45,22 @@ Documentation = "https://pytest-jupyterhub.readthedocs.io"
 Source = "https://github.com/jupyterhub/pytest-jupyterhub"
 Issues = "https://github.com/jupyterhub/pytest-jupyterhub/issues"
 
+# hatch ref: https://hatch.pypa.io/latest/
+#
+[tool.hatch.version]
+path = "pytest_jupyterhub/_version.py"
+
+
+# autoflake is used for autoformatting Python code
+#
+# ref: https://github.com/PyCQA/autoflake#readme
+#
+[tool.autoflake]
+ignore-init-module-imports = true
+remove-all-unused-imports = true
+remove-duplicate-keys = true
+remove-unused-variables = true
+
 
 # black is used for autoformatting Python code
 #
@@ -60,12 +76,6 @@ target_version = [
     "py310",
     "py311",
 ]
-
-
-# hatch ref: https://hatch.pypa.io/latest/
-#
-[tool.hatch.version]
-path = "pytest_jupyterhub/_version.py"
 
 
 # isort is used for autoformatting Python code
