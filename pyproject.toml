@@ -65,7 +65,7 @@ target_version = [
 # hatch ref: https://hatch.pypa.io/latest/
 #
 [tool.hatch.version]
-path = "pytest-jupyterhub/_version.py"
+path = "pytest_jupyterhub/_version.py"
 
 
 # isort is used for autoformatting Python code
