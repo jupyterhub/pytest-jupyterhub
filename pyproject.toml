@@ -128,4 +128,4 @@ src = "pytest_jupyterhub/_version.py"
 
 # specify plugin entrypoints
 [project.entry-points.pytest11]
-jupyterhub-spawners = "jupyterhub_spawners"
+jupyterhub-spawners-plugin = "pytest_jupyterhub.jupyterhub_spawners"
