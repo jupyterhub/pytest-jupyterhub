@@ -23,6 +23,7 @@ authors = [
 classifiers = [
     "Development Status :: 5 - Production/Stable",
     "Programming Language :: Python :: 3",
+    "Framework :: Pytest"
 ]
 # Lists the packages and pins them to a version that your project depends on
 dependencies = [
@@ -36,8 +37,8 @@ dynamic = ["version"]
 [project.optional-dependencies]
 test = [
     "pytest>=7.2.0",
-    "pytest-cov",
-    "pytest-asyncio>=0.20.3",
+    "pytest-cov>=4.0.0",
+    "pytest-asyncio>=0.20.3"
 ]
 
 [project.urls]
@@ -124,3 +125,8 @@ tag_template = "{new_version}"
 
 [[tool.tbump.file]]
 src = "pytest_jupyterhub/_version.py"
+
+# specify project entrypoints to make each plugin discoverable by pytest
+# ref: https://docs.pytest.org/en/latest/how-to/writing_plugins.html#making-your-plugin-installable-by-others
+[project.entry-points.pytest11]
+jupyterhub-spawners-plugin = "pytest_jupyterhub.jupyterhub_spawners"
