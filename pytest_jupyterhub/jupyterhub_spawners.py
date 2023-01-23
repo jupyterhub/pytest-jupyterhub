@@ -9,5 +9,5 @@ from jupyterhub.spawner import Spawner
 
 @pytest.fixture
 def spawner_class():
-    # returns the spawner class to be used by the hub
+    """Allows tests to setup the Spawner class that will be used by the hub."""
     return Spawner
