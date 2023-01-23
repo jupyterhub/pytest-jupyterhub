@@ -3,9 +3,11 @@ This plugin module will create a lightweight jupyterhub application that
 can be used to test different spawner implementations
 """
 
-from pytest import fixture
+import pytest
+from jupyterhub.spawner import Spawner
 
 
-@fixture
-def app_for_spawners():
-    pass
+@pytest.fixture
+def spawner_class():
+    """Allows tests to setup the Spawner class that will be used by the hub."""
+    return Spawner
