@@ -15,7 +15,7 @@ def spawner_class():
 
 
 @pytest.fixture
-def jupyterhub_spawner_config(spawner_class):
+def jupyterhub_spawner_class_config(spawner_class):
     """Configures JupyterHub to use the Spawner class"""
     c = Config()
     c.JupyterHub.spawner_class = spawner_class
