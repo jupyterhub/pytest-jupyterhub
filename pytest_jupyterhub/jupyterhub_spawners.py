@@ -24,5 +24,4 @@ def jupyterhub_spawner_class_config(spawner_class):
 @pytest.fixture
 def spawner_config():
     """Allows tests to setup configurations that are specific to the spawner implementation"""
-    spawner_config = {}
-    return Config(spawner_config)
+    return Config()
