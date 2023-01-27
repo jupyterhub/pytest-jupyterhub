@@ -34,8 +34,11 @@ def spawner_config():
 @pytest.fixture
 def app_for_spawners(request, jupyterhub_spawner_class_config, spawner_config):
     """Creates an instance of a JupyterHub application that can be used by different spawner implementation test suites"""
-    config = jupyterhub_spawner_class_config.merge(spawner_config)
-    mocked_app = MockHub.instance(config)
+    config = jupyterhub_spawner_class_config
+    for key, value in spawner_config.items():
+        config[key] = value
+
+    mocked_app = MockHub.instance(config=config)
 
     async def make_app():
         """Initializes the mocked application and starts it"""
