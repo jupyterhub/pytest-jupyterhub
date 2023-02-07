@@ -36,6 +36,7 @@ default_role = "literal"
 # ones.
 # Add more extensions based on needs here
 extensions = [
+    "autodoc_traits",
     "sphinx.ext.autodoc",
     "sphinx_copybutton",
     "myst_parser",
