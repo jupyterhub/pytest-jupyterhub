@@ -1,4 +1,4 @@
-# Fixtures for JupyterHub Spawners
+# JupyterHub Spawners Plugin
 
 ## Module: {mod}`pytest_jupyterhub.jupyterhub_spawners`
 

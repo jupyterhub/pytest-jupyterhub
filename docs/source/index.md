@@ -15,7 +15,12 @@ The goal is to provide importable testing utilities to make it easier for contri
 :caption: Table of Contents
 fixtures
 changelog
-jupyterhub_spawners
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: API Reference
+api/index
 ```
 
 <!-- testing -->
