@@ -31,7 +31,8 @@ dependencies = [
     #       bounds in .github/workflows/test.yaml.
     "jupyterhub>=2.0.0",
     "pytest",
-    "pytest-asyncio"
+    "pytest-asyncio",
+    "jupyter_server"
 ]
 dynamic = ["version"]
 
