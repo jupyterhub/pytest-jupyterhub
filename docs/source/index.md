@@ -10,17 +10,24 @@ Each of these hub components and the hub itself define their own testing infrast
 
 The goal is to provide importable testing utilities to make it easier for contributors to write tests for the various hub components. This will involve creating and using **fixtures** and **mocks**.
 
+## Contents
+
 ```{toctree}
 :maxdepth: 2
-:caption: Table of Contents
+:caption: Introduction
 fixtures
-changelog
 ```
 
 ```{toctree}
 :maxdepth: 2
-:caption: API Reference
+:caption: Plugins
 api/index
+```
+
+```{toctree}
+:maxdepth: 2
+:caption: About Us
+changelog
 ```
 
 <!-- testing -->
