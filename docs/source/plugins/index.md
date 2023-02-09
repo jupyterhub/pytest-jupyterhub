@@ -1,4 +1,4 @@
-(api-index)=
+(plugins-index)=
 
 # JupyterHub Pytest Plugins
 

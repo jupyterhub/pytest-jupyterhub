@@ -21,12 +21,12 @@ fixtures
 ```{toctree}
 :maxdepth: 2
 :caption: Plugins
-api/index
+plugins/index
 ```
 
 ```{toctree}
 :maxdepth: 2
-:caption: About Us
+:caption: About the JupyterHub Pytest Plugin
 changelog
 ```
 
