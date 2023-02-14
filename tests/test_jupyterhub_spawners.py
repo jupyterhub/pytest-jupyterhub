@@ -18,5 +18,6 @@ async def test_jupyterhub_spawner_class_config(jupyterhub_spawner_class_config):
 
 
 async def test_app_for_spawners(app_for_spawners):
-    """Tests that the app fixture is an instance of JupyterHub"""
+    """Tests the app_for_spawners fixture"""
     assert isinstance(app_for_spawners, JupyterHub)
+    assert app_for_spawners.spawner_class == Spawner
