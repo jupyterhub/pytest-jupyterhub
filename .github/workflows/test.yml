@@ -26,7 +26,7 @@ permissions:
   contents: read
 
 jobs:
-  # Run "pytest pytest_jupyterhub/tests in various configurations
+  # Run the tests in various configurations
   pytest:
     runs-on: ubuntu-22.04
 
@@ -58,7 +58,7 @@ jobs:
 
       - name: Run pytest
         run: |
-          pytest -v --cov=pytest_jupyterhub pytest_jupyterhub/tests
+          pytest -v --cov=pytest_jupyterhub tests
 
       - name: Submit codecov report
         run: |
