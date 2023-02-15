@@ -6,15 +6,8 @@ can be used to test different spawner implementations
 import sys
 
 import pytest
-from jupyterhub.spawner import Spawner
 from jupyterhub.tests.mocking import MockHub
 from traitlets.config import Config
-
-
-@pytest.fixture
-async def spawner_class():
-    """Allows tests to setup the Spawner class that will be used by the hub."""
-    return Spawner
 
 
 @pytest.fixture
