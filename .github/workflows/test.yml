@@ -28,7 +28,7 @@ permissions:
 jobs:
   # Run "pytest pytest_jupyterhub/tests in various configurations
   pytest:
-    runs-on: ubuntu-20.04
+    runs-on: ubuntu-22.04
 
     strategy:
       # Keep running even if one variation of the job fail
