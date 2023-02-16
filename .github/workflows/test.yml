@@ -67,7 +67,7 @@ jobs:
           pip install -e ".[test]"
           pip freeze
 
-      - name: Run pytest
+      - name: Run the tests
         run: |
           pytest -v --cov=pytest_jupyterhub tests
 

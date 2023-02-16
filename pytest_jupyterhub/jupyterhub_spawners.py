@@ -12,6 +12,18 @@ from traitlets.config import Config
 
 @pytest.fixture
 async def get_configured_mockhub_instance():
+    """
+    Creates a MockHub instance from a provided traitlets.config Config object
+    or the empty Config is none is passed as an argument.
+
+    This fixture is a factory and returns a function.
+
+    It should be called like:
+    .. code-block:: python
+      def my_test(get_configured_mockhub_instance):
+         hub_instance = get_configured_mockhub_instance(config=Config({"a": "b"})
+         ...
+    """
     def _create_configured_mockhub_instance(
         config=Config(),
     ):
@@ -24,6 +36,11 @@ async def get_configured_mockhub_instance():
 
 @pytest.fixture
 async def hub_app(hub_app_cleanup):
+    """
+    Starts the current hub app.
+    """
+    # Get the global instance of MockHub
+    # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
     app = MockHub.instance()
     await app.initialize([])
     await app.start()
