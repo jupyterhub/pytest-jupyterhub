@@ -6,7 +6,7 @@ can be used to test different spawner implementations
 import sys
 
 import pytest
-from jupyterhub.tests.mocking import MockHub, MockSpawner
+from jupyterhub.tests.mocking import MockHub
 from traitlets.config import Config
 
 
@@ -24,6 +24,7 @@ async def get_configured_mockhub_instance():
          hub_instance = get_configured_mockhub_instance(config=Config({"a": "b"})
          ...
     """
+
     def _create_configured_mockhub_instance(
         config=Config(),
     ):

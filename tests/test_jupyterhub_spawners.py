@@ -1,8 +1,8 @@
-from traitlets.config import Config
-
 from jupyterhub.app import JupyterHub
 from jupyterhub.spawner import Spawner
 from jupyterhub.tests.mocking import MockSpawner
+from traitlets.config import Config
+
 
 async def test_default_mockhub_instance_creator(get_configured_mockhub_instance):
     hub_instance = get_configured_mockhub_instance()
