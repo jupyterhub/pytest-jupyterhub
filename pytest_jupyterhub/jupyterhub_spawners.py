@@ -17,6 +17,7 @@ async def get_configured_mockhub_instance():
     or the empty Config is none is passed as an argument.
 
     This fixture is a factory and returns a function.
+    More about factory fixtures at https://docs.pytest.org/en/latest/how-to/fixtures.html#factories-as-fixtures
 
     It should be called like:
     .. code-block:: python
@@ -39,6 +40,7 @@ async def get_configured_mockhub_instance():
 async def hub_app(hub_app_cleanup):
     """
     Starts the current hub app.
+    Requires `hub_app_cleanup` to clean up any resources still running.
     """
     # Get the global instance of MockHub
     # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
