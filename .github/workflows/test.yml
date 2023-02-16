@@ -71,6 +71,6 @@ jobs:
         run: |
           pytest -v --cov=pytest_jupyterhub tests
 
-      - name: Submit codecov report
-        run: |
-          codecov
+      # - name: Submit codecov report
+      #   run: |
+      #     codecov
