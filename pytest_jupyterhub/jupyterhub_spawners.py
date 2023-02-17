@@ -37,7 +37,7 @@ async def get_configured_mockhub_instance():
 
 
 @pytest.fixture
-async def hub_app(hub_app_cleanup):
+async def hub_app():
     """
     Starts the current hub app.
     Requires `hub_app_cleanup` to clean up any resources still running.
@@ -48,17 +48,19 @@ async def hub_app(hub_app_cleanup):
     await app.initialize([])
     await app.start()
 
-    return app
+    yield app
 
-
-@pytest.fixture()
-def hub_app_cleanup():
-    """Automatically cleans up hub resources."""
-    yield
-    app = MockHub.instance()
     app.log.handlers = []
     try:
-        app.stop()
+        # Explicitly close the http server socket to not leek any fds
+        # Also await app.shutdown_cancel_tasks()
+        # Note that this is equivalent to the app.stop() function
+        # Explicitly cleaning up resources like this, removes the need to depend
+        # on the io_loop fixture to make sure the cleanup happens before the io_loop is closed.
+        # ref https://github.com/jupyterhub/jupyterhub/blob/c9d52ce6ffd255c26b6ecd396a81583a7250c53b/jupyterhub/app.py#L3356-L3358
+        if app.http_server:
+            app.http_server.stop()
+        await app.shutdown_cancel_tasks()
     except Exception as e:
         print("Error stopping Hub: %s" % e, file=sys.stderr)
 
