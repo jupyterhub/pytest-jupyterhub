@@ -24,6 +24,8 @@ async def get_configured_mockhub_instance():
       def my_test(get_configured_mockhub_instance):
          hub_instance = get_configured_mockhub_instance(config=Config({"a": "b"})
          ...
+
+    Note that the fixture has a `function` scope.
     """
 
     def _create_configured_mockhub_instance(
@@ -41,6 +43,8 @@ async def hub_app():
     """
     Starts and yields the existing global instance of MockHub.
     The app is stopped and the instance is cleaned up afterwards.
+
+    Note that the fixture has a `function` scope.
     """
     # Get the global instance of MockHub
     # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
