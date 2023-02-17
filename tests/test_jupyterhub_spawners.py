@@ -65,7 +65,7 @@ async def test_hub_app_configured(hub_app):
     }
     app = await hub_app(config_dict)
 
-    #Check expected config
+    # Check expected config
     assert app.spawner_class == config_dict["JupyterHub"]["spawner_class"]
     assert app.config == config_dict
 
