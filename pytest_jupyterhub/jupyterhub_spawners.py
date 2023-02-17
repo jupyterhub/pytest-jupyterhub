@@ -39,8 +39,8 @@ async def get_configured_mockhub_instance():
 @pytest.fixture
 async def hub_app():
     """
-    Starts the current hub app.
-    Requires `hub_app_cleanup` to clean up any resources still running.
+    Starts and yields the existing global instance of MockHub.
+    The app is stopped and the instance is cleaned up afterwards.
     """
     # Get the global instance of MockHub
     # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
