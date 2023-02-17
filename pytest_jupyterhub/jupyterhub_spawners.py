@@ -11,49 +11,65 @@ from traitlets.config import Config
 
 
 @pytest.fixture
-async def get_configured_mockhub_instance():
+async def configured_mockhub_instance():
     """
-    Creates a MockHub instance from a provided traitlets.config Config object
-    or the empty Config is none is passed as an argument.
+    Creates a MockHub instance from a provided config dict
+    or with the empty config if none is passed as an argument.
 
     This fixture is a factory and returns a function.
     More about factory fixtures at https://docs.pytest.org/en/latest/how-to/fixtures.html#factories-as-fixtures
 
     It should be called like:
     .. code-block:: python
-      def my_test(get_configured_mockhub_instance):
-         hub_instance = get_configured_mockhub_instance(config=Config({"a": "b"})
+      def my_test(configured_mockhub_instance):
+         hub_instance = configured_mockhub_instance(config={"a": "b"})
          ...
 
     Note that the fixture has a `function` scope.
     """
 
     def _create_configured_mockhub_instance(
-        config=Config(),
+        config={},
     ):
         MockHub.clear_instance()
-        mocked_app = MockHub.instance(config=config)
+        mocked_app = MockHub.instance(config=Config(config))
         return mocked_app
 
     return _create_configured_mockhub_instance
 
 
 @pytest.fixture
-async def hub_app():
+async def hub_app(configured_mockhub_instance):
     """
-    Starts and yields the existing global instance of MockHub.
-    The app is stopped and the instance is cleaned up afterwards.
+    Creates a MockHub instance from a provided config dict, it then
+    starts and yields it.
+
+    This fixture is a factory and returns an async function.
+    More about factory fixtures at https://docs.pytest.org/en/latest/how-to/fixtures.html#factories-as-fixtures
+
+    It should be called like:
+    .. code-block:: python
+      async def my_test(hub_app):
+         app = await hub_app(config={"a": "b"})
+         ...
+
+    The created app is stopped and the instance is cleaned up afterwards.
 
     Note that the fixture has a `function` scope.
     """
-    # Get the global instance of MockHub
-    # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
+
+    async def _create_hub_app(config={}):
+        # Get the global instance of MockHub
+        # ref: https://traitlets.readthedocs.io/en/stable/config-api.html#traitlets.config.SingletonConfigurable.instance
+        app = configured_mockhub_instance(config)
+        await app.initialize()
+        await app.start()
+
+        return app
+
+    yield _create_hub_app
+
     app = MockHub.instance()
-    await app.initialize([])
-    await app.start()
-
-    yield app
-
     app.log.handlers = []
     try:
         # Explicitly close the http server socket to not leek any fds
