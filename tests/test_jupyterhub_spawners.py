@@ -35,7 +35,7 @@ async def test_mockhub_instance_creator(configured_mockhub_instance):
     assert new_hub_instance.config == config_dict
 
     # No `pid_file` should be available for a simple non-running hub instance
-    assert not hub_instance.pid_file
+    assert not new_hub_instance.pid_file
 
 
 async def test_default_hub_app(hub_app):
