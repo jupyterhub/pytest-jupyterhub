@@ -1,4 +1,16 @@
-# Reusable JupyterHub Pytest Plugin
+**[Description](#description)** |
+**[Installation](#installation)** |
+**[Usage](#usage)**
+
+---
+
+# [Reusable JupyterHub Pytest Plugin](https://github.com/jupyterhub/pytest-jupyterhub)
+
+[![Latest PyPI version](https://img.shields.io/pypi/v/pytest-jupyterhub?logo=pypi)](https://pypi.python.org/pypi/pytest-jupyterhub)
+[![Documentation status](https://img.shields.io/readthedocs/pytest-jupyterhub?logo=read-the-docs)](https://pytest-jupyterhub.readthedocs.io/en/latest/?badge=latest)
+[![GitHub Workflow Status - Test](https://img.shields.io/github/workflow/status/jupyterhub/pytest-jupyterhub/Test?logo=github&label=tests)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
+[![Test coverage of code](https://codecov.io/gh/jupyterhub/pytest-jupyterhub/branch/main/graph/badge.svg)](https://codecov.io/gh/jupyterhub/pytest-jupyterhub)
+[![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/jupyterhub/pytest-jupyterhub/issues)
 
 ## Description
 
@@ -23,7 +35,7 @@ The [init_db](https://github.com/jupyterhub/jupyterhub/blob/336d7cfcfaf74087e4ee
 
 However, the mock [init_db](https://github.com/jupyterhub/jupyterhub/blob/336d7cfcfaf74087e4ee467d5e3d3bec0c25c3d0/jupyterhub/tests/mocking.py#L295) function in JupyterHub's `mocking` module initializes a database connection for the mocked JupyterHub application instance by calling the `init_db` function of the JupyterHub superclass but also has a `test_clean_db` attribute to ensure that the database is reset to a clean state before running tests.
 
-## Usage
+## Installation
 
 To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip by either:
 
@@ -45,6 +57,8 @@ To use the **JupyterHub Pytest Plugin**, you will first need to install it using
   pip install --upgrade pip
   pip install -r requirements.txt
   ```
+
+## Usage
 
 To use a specific fixture or mock, import it from its module in the `pytest_jupyterhub` package:
 
