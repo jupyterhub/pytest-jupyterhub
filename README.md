@@ -25,12 +25,26 @@ However, the mock [init_db](https://github.com/jupyterhub/jupyterhub/blob/336d7c
 
 ## Usage
 
-To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip:
+To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip by either:
 
-```python
-pip install --upgrade pip
-pip install git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
-```
+- installing it locally
+  ```bash
+  pip install --upgrade pip
+  pip install git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
+  ```
+- adding it to the `requirements.txt` file of your project:
+
+  ```python
+  # in requirements.txt
+  git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
+  ```
+
+  then run:
+
+  ```bash
+  pip install --upgrade pip
+  pip install -r requirements.txt
+  ```
 
 To use a specific fixture or mock, import it from its module in the `pytest_jupyterhub` package:
 
