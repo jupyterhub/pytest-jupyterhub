@@ -16,7 +16,7 @@ The JupyterHub Pytest Plugin uses [Git](https://git-scm.com) & [GitHub](https://
 
 ## Setting up a development install
 
-When developing JupyterHub, you would need to make changes and be able to instantly view the results of the changes. To achieve that, a developer install is required.
+When developing Pytest JupyterHub, you would need to make changes and be able to instantly test the changes. To achieve that, a developer install is required.
 
 :::{note}
 This guide does not attempt to dictate _how_ development
@@ -41,7 +41,7 @@ a more detailed discussion.
 
    This should return a version number greater than or equal to 3.8.
 
-3. Install an editable version of Pytest JupyterHub and its requirements for development and testing.
+3. Install an editable version of Pytest-JupyterHub and its requirements for development and testing.
 
    ```bash
    python3 -m pip install --editable ".[test]"

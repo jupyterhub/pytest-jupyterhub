@@ -6,10 +6,8 @@ Documentation is often more important than code. This page helps you get set up 
 
 ## Building documentation locally
 
-We use [sphinx](https://www.sphinx-doc.org) to build our documentation. It takes our documentation source files (written in [markdown](https://daringfireball.net/projects/markdown/) or [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) &
-stored under the `docs/source` directory) and converts it into various
-formats for people to read. To make sure the documentation you write or
-change renders correctly, it is good practice to test it locally.
+We use [sphinx](https://www.sphinx-doc.org) to build our documentation. It takes our documentation source files (written in [markdown](https://daringfireball.net/projects/markdown/) or [reStructuredText](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) & stored under the `docs/source` directory) and converts it into various
+formats for people to read. To make sure the documentation you write or change renders correctly, it is good practice to test it locally.
 
 1. Make sure you have successfully completed {ref}`contributing/setup`.
 
@@ -28,9 +26,7 @@ change renders correctly, it is good practice to test it locally.
    make html
    ```
 
-   This step will display any syntax or formatting errors in the documentation,
-   along with the filename / line number in which they occurred. Fix them,
-   and re-run the `make html` command to re-render the documentation.
+   This step will display any syntax or formatting errors in the documentation, along with the filename / line number in which they occurred. Fix them, and re-run the `make html` command to re-render the documentation.
 
 4. View the rendered documentation by opening `_build/html/index.html` in
    a web browser.
@@ -42,8 +38,7 @@ change renders correctly, it is good practice to test it locally.
 
    **On Linux**, you can do the same with `xdg-open <path-to-file>`.
 
-   After opening index.html in your browser you can just refresh the page whenever
-   you rebuild the docs via `make html`
+   After opening index.html in your browser you can just refresh the page whenever you rebuild the docs via `make html`
    :::
 
 (contributing-docs-conventions)=

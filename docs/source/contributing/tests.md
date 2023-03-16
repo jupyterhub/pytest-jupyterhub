@@ -19,12 +19,6 @@ Pytest JupyterHub uses [pytest](https://pytest.org) for all the tests. You can f
 
    This should display progress as it runs all the tests, printing information about any test failures as they occur.
 
-   If you wish to confirm test coverage the run tests with the `--cov` flag:
-
-   ```bash
-   pytest -v --cov=pytest_jupyterhub tests
-   ```
-
 3. You can also run tests in just a specific file:
 
    ```bash
@@ -39,8 +33,7 @@ Pytest JupyterHub uses [pytest](https://pytest.org) for all the tests. You can f
 
    This runs the test with function name `<test-name>` defined in `<test-file-name>`. This is very useful when you are iteratively developing a single test.
 
-   For example, to run the test `test_default_hub_app` in the file `test_jupyterhub_spawners.py`,
-   you would run:
+   For example, to run the test `test_default_hub_app` in the file `test_jupyterhub_spawners.py`, you would run:
 
    ```bash
    pytest -v tests/test_jupyterhub_spawners.py::test_default_hub_app
@@ -85,9 +78,7 @@ Make sure you have completed all the steps in {ref}`contributing/setup` successf
 
 Pytest JupyterHub automatically enforces code formatting. This means that pull requests with changes breaking this formatting will receive a commit from `pre-commit.ci` automatically.
 
-To automatically format code locally, you can install `pre-commit` and register a
-_git hook_ to automatically check with pre-commit before you make a commit if
-the formatting is okay.
+To automatically format code locally, you can install `pre-commit` and register a _git hook_ to automatically check with pre-commit before you make a commit if the formatting is okay.
 
 ```bash
 pip install pre-commit
@@ -106,5 +97,8 @@ pre-commit run --all-files
 
 To skip pre-commit checks use the tag `--no-verify` in your commit.
 
-You may also install [black integration](https://github.com/psf/black#editor-integration)
-into your text editor to format code automatically.
+```bash
+git commit -m "initial commit" --no-verify
+```
+
+You may also install [black integration](https://github.com/psf/black#editor-integration) into your text editor to format code automatically.
