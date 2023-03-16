@@ -1,3 +1,5 @@
+(contributing-index)=
+
 # Contributing
 
 We want you to contribute to Pytest JupyterHub in ways that are most exciting
