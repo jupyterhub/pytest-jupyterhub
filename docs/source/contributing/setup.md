@@ -4,7 +4,7 @@
 
 ## System Requirements
 
-The `JupyterHub Pytest Plugin` uses `JupyterHub` which can only run on macOS or Linux operating systems. If you are using Windows, we recommend using [VirtualBox](https://virtualbox.org) or a similar system to run [Ubuntu Linux](https://ubuntu.com) for development.
+The [JupyterHub Pytest Plugin](https://github.com/jupyterhub/pytest-jupyterhub) uses [JupyterHub](https://github.com/jupyterhub/jupyterhub) which can only run on macOS or Linux operating systems. If you are using Windows, we recommend using [VirtualBox](https://virtualbox.org) or a similar system to run [Ubuntu Linux](https://ubuntu.com) for development.
 
 ### Install Python
 
