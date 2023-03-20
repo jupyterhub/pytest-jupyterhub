@@ -18,13 +18,13 @@ The JupyterHub Pytest Plugin uses [Git](https://git-scm.com) & [GitHub](https://
 
 When developing Pytest JupyterHub, you would need to make changes and be able to instantly test the changes. To achieve that, a developer install is required.
 
-:::{note}
+```{note}
 This guide does not attempt to dictate _how_ development
 environments should be isolated since that is a personal preference and can
 be achieved in many ways, for example, `tox`, `conda`, `docker`, etc. See this
 [forum thread](https://discourse.jupyter.org/t/thoughts-on-using-tox/3497) for
 a more detailed discussion.
-:::
+```
 
 1. Clone the [Pytest JupyterHub](https://github.com/jupyterhub/pytest-jupyterhub) repository to your computer.
 
