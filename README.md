@@ -6,10 +6,8 @@
 
 # [Reusable JupyterHub Pytest Plugin](https://github.com/jupyterhub/pytest-jupyterhub)
 
-[![Latest PyPI version](https://img.shields.io/pypi/v/pytest-jupyterhub?logo=pypi)](https://pypi.python.org/pypi/pytest-jupyterhub)
 [![Documentation status](https://img.shields.io/readthedocs/pytest-jupyterhub?logo=read-the-docs)](https://pytest-jupyterhub.readthedocs.io/en/latest/?badge=latest)
 [![GitHub Workflow Status - Test](https://github.com/jupyterhub/pytest-jupyterhub/actions/workflows/test.yml/badge.svg)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
-[![Test coverage of code](https://codecov.io/gh/jupyterhub/pytest-jupyterhub/branch/main/graph/badge.svg)](https://codecov.io/gh/jupyterhub/pytest-jupyterhub)
 [![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/jupyterhub/pytest-jupyterhub/issues)
 
 ## Description
