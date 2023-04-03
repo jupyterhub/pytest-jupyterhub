@@ -32,12 +32,14 @@ Pytest JupyterHub uses [pytest](https://pytest.org) for all the tests. You can f
    ```
 
    This runs the test with function name `<test-name>` defined in `<test-file-name>`. This is very useful when you are iteratively developing a single test.
-
+   :::{example}
    For example, to run the test `test_default_hub_app` in the file `test_jupyterhub_spawners.py`, you would run:
 
    ```bash
    pytest -v tests/test_jupyterhub_spawners.py::test_default_hub_app
    ```
+
+   :::
 
    For more details, refer to the [pytest usage documentation](https://pytest.readthedocs.io/en/latest/usage.html).
 
@@ -54,10 +56,10 @@ The [`app`](https://github.com/jupyterhub/jupyterhub/blob/270b61992143b29af8c2fa
 
 The JupyterHub test suite uses the [pytest-asyncio plugin](https://pytest-asyncio.readthedocs.io/en/latest/) that handles [event-loop](https://docs.python.org/3/library/asyncio-eventloop.html) integration in [Tornado](https://www.tornadoweb.org/en/stable/) applications. This allows for the use of top-level awaits when calling async functions or [fixtures](https://docs.pytest.org/en/6.2.x/fixture.html#what-fixtures-are) during testing. All test functions and fixtures labelled as `async` will run on the same event loop.
 
-```{note}
+:::{note}
 With the introduction of [top-level awaits](https://piccolo-orm.com/blog/top-level-await-in-python/), the use of the `io_loop` fixture of the [pytest-tornado plugin](https://www.tornadoweb.org/en/stable/ioloop.html) is no longer necessary. It was initially used to call coroutines. With the upgrades made to `pytest-asyncio`, this usage is now deprecated. It is now, only utilized within the JupyterHub test suite to ensure complete cleanup of resources used during testing such as open file descriptors. This is demonstrated in this [pull request](https://github.com/jupyterhub/jupyterhub/pull/4332).
 More information is provided below.
-```
+:::
 
 One of the general goals of the [JupyterHub Pytest Plugin project](https://github.com/jupyterhub/pytest-jupyterhub) is to ensure the MockHub cleanup fully closes and stops all utilized resources during testing so the use of the `io_loop` fixture for teardown is not necessary. This was highlighted in this [issue](https://github.com/jupyterhub/pytest-jupyterhub/issues/30)
 
