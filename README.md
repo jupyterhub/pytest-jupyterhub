@@ -29,34 +29,31 @@ For more information on Mocks, check out this [unittest documentation](https://d
 
 ## Installation
 
-To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip by either:
+To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip:
 
-- installing it locally
-  ```bash
-  pip install --upgrade pip
-  pip install git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
-  ```
-- adding it to the `requirements.txt` file of your project:
+**Note**: Currently, Pytest JupyterHub can only be installed from GitHub since it is yet to be released on PyPI.
 
-  ```python
-  # in requirements.txt
-  git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
-  ```
-
-  then run:
-
-  ```bash
-  pip install --upgrade pip
-  pip install -r requirements.txt
-  ```
+```bash
+pip install git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
+```
 
 ## Usage
 
-To use a specific fixture or mock, import it from its module in the `pytest_jupyterhub` package:
+To use a plugin, first register/load the plugin in your test module or `conftest.py` file:
 
 ```python
-from pytest_jupyterhub.jupyterhub_spawners import hub_app
+pytest_plugins = "jupyterhub-spawners-plugin"
 ```
+
+To register multiple plugins:
+
+```python
+pytest_plugins = ["jupyterhub-spawners-plugin", "other-plugin"]
+```
+
+For more information, check out this document on [Requiring/Loading plugins in a test module or conftest file](https://docs.pytest.org/en/stable/how-to/writing_plugins.html#requiring-loading-plugins-in-a-test-module-or-conftest-file)
+
+All fixtures and mocks inside the plugin will be available to all of your project's test suites. You can use a fixture by passing it as an argument to your test function.
 
 ### Example
 
