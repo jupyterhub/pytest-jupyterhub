@@ -2,7 +2,7 @@
 #
 # Notes:
 # - Status and logs from dependabot are provided at
-#   https://github.com/jupyterhub/jupyterhub/network/updates.
+#   https://github.com/jupyterhub/pytest-jupyterhub/network/updates.
 #
 version: 2
 updates:
