@@ -15,7 +15,7 @@ on:
       - "docs/**"
       - "**.md"
       - ".github/workflows/*"
-      - "!.github/workflows/publish.yaml"
+      - "!.github/workflows/release.yaml"
     branches-ignore:
       - "dependabot/**"
       - "pre-commit-ci-update-config"
