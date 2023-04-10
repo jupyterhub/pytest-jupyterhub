@@ -1,6 +1,7 @@
 **[Description](#description)** |
 **[Installation](#installation)** |
-**[Usage](#usage)**
+**[Usage](#usage)** |
+**[Contributing](#contributing)**
 
 ---
 
@@ -78,3 +79,9 @@ async def app(hub_app):
 
     return app
 ```
+
+## Contributing
+
+If you would like to contribute to the project, please read our [contributor documentation](https://pytest-jupyterhub.readthedocs.io/en/latest/contributing/index.html) and the [CONTRIBUTING.md](https://github.com/jupyterhub/pytest-jupyterhub/blob/main/CONTRIBUTING.md).
+
+The contributor documentation explains how to set up a development installation, how to run the test suite, and how to contribute to documentation.
