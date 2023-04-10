@@ -26,6 +26,12 @@ plugins/index
 
 ```{toctree}
 :maxdepth: 2
+:caption: Contributing
+contributing/index
+```
+
+```{toctree}
+:maxdepth: 2
 :caption: About JupyterHub Pytest Plugin
 changelog
 ```

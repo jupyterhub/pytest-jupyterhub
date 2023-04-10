@@ -21,9 +21,10 @@ async def configured_mockhub_instance():
 
     It should be called like:
     .. code-block:: python
-      def my_test(configured_mockhub_instance):
-         hub_instance = configured_mockhub_instance(config={"a": "b"})
-         ...
+
+        def my_test(configured_mockhub_instance):
+            hub_instance = configured_mockhub_instance(config={"a": "b"})
+            ...
 
     Note that the fixture has a `function` scope.
     """
@@ -49,9 +50,10 @@ async def hub_app(configured_mockhub_instance):
 
     It should be called like:
     .. code-block:: python
-      async def my_test(hub_app):
-         app = await hub_app(config={"a": "b"})
-         ...
+
+        async def my_test(hub_app):
+            app = await hub_app(config={"a": "b"})
+            ...
 
     The created app is stopped and the instance is cleaned up afterwards.
 

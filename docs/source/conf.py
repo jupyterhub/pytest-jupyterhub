@@ -37,6 +37,7 @@ default_role = "literal"
 # Add more extensions based on needs here
 extensions = [
     "autodoc_traits",
+    "sphinx.ext.napoleon",
     "sphinx.ext.autodoc",
     "sphinx_copybutton",
     "myst_parser",
@@ -55,6 +56,15 @@ root_doc = master_doc = "index"
 
 # The suffix(es) of source filenames.
 source_suffix = [".md"]
+
+# -- MyST configuration ------------------------------------------------------
+# ref: https://myst-parser.readthedocs.io/en/latest/configuration.html
+#
+
+myst_enable_extensions = [
+    # available extensions: https://myst-parser.readthedocs.io/en/latest/syntax/optional.html
+    "colon_fence",
+]
 
 # -- Options for HTML output -------------------------------------------------
 # ref: https://www.sphinx-doc.org/en/master/usage/configuration.html#options-for-html-output
