@@ -7,6 +7,7 @@
 
 # [Reusable JupyterHub Pytest Plugin](https://github.com/jupyterhub/pytest-jupyterhub)
 
+[![Latest PyPI version](https://img.shields.io/pypi/v/pytest-jupyterhub?logo=pypi)](https://pypi.python.org/pypi/pytest-jupyterhub)
 [![Documentation status](https://img.shields.io/readthedocs/pytest-jupyterhub?logo=read-the-docs)](https://pytest-jupyterhub.readthedocs.io/en/latest/?badge=latest)
 [![GitHub Workflow Status - Test](https://img.shields.io/github/actions/workflow/status/jupyterhub/pytest-jupyterhub/test.yml?logo=github&label=tests&branch=main)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
 [![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/jupyterhub/pytest-jupyterhub/issues)
@@ -31,8 +32,6 @@ For more information on Mocks, check out this [unittest documentation](https://d
 ## Installation
 
 To use the **JupyterHub Pytest Plugin**, you will first need to install it using pip:
-
-**Note**: Currently, Pytest JupyterHub can only be installed from GitHub since it is yet to be released on PyPI.
 
 ```bash
 pip install pytest-jupyterhub
