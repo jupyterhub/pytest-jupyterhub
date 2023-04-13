@@ -8,7 +8,7 @@
 # [Reusable JupyterHub Pytest Plugin](https://github.com/jupyterhub/pytest-jupyterhub)
 
 [![Documentation status](https://img.shields.io/readthedocs/pytest-jupyterhub?logo=read-the-docs)](https://pytest-jupyterhub.readthedocs.io/en/latest/?badge=latest)
-[![GitHub Workflow Status - Test](https://github.com/jupyterhub/pytest-jupyterhub/actions/workflows/test.yml/badge.svg)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
+[![GitHub Workflow Status - Test](https://img.shields.io/github/actions/workflow/status/jupyterhub/pytest-jupyterhub/test.yml?logo=github&label=tests&branch=main)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
 [![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/jupyterhub/pytest-jupyterhub/issues)
 
 ## Description
