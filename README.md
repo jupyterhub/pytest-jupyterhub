@@ -35,7 +35,7 @@ To use the **JupyterHub Pytest Plugin**, you will first need to install it using
 **Note**: Currently, Pytest JupyterHub can only be installed from GitHub since it is yet to be released on PyPI.
 
 ```bash
-pip install git+https://github.com/jupyterhub/pytest-jupyterhub.git@main
+pip install pytest-jupyterhub
 ```
 
 ## Usage
