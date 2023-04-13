@@ -53,10 +53,10 @@ a more detailed discussion.
 
    This should return a version number greater than or equal to 5.0.
 
-3. Install `configurable-http-proxy` (required to run and test the default JupyterHub configuration) and `yarn` (required to build some components):
+3. Install `configurable-http-proxy` (required to run and test the default JupyterHub configuration):
 
    ```bash
-   npm install -g configurable-http-proxy yarn
+   npm install -g configurable-http-proxy
    ```
 
    If you get an error that says `Error: EACCES: permission denied`, you might need to prefix the command with `sudo`.
@@ -64,7 +64,7 @@ a more detailed discussion.
    If you do not have access to sudo, you may instead run the following commands:
 
    ```bash
-   npm install configurable-http-proxy yarn
+   npm install configurable-http-proxy
    export PATH=$PATH:$(pwd)/node_modules/.bin
    ```
 
@@ -73,7 +73,7 @@ a more detailed discussion.
    If you are using conda you can instead run:
 
    ```bash
-   conda install configurable-http-proxy yarn
+   conda install configurable-http-proxy
    ```
 
 4. Install an editable version of Pytest-JupyterHub and its requirements for development and testing.
