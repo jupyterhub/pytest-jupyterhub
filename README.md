@@ -11,6 +11,7 @@
 [![Documentation status](https://img.shields.io/readthedocs/pytest-jupyterhub?logo=read-the-docs)](https://pytest-jupyterhub.readthedocs.io/en/latest/?badge=latest)
 [![GitHub Workflow Status - Test](https://img.shields.io/github/actions/workflow/status/jupyterhub/pytest-jupyterhub/test.yml?logo=github&label=tests&branch=main)](https://github.com/jupyterhub/pytest-jupyterhub/actions)
 [![GitHub](https://img.shields.io/badge/issue_tracking-github-blue?logo=github)](https://github.com/jupyterhub/pytest-jupyterhub/issues)
+[![Test coverage of code](https://codecov.io/gh/jupyterhub/pytest-jupyterhub/branch/main/graph/badge.svg)](https://codecov.io/gh/jupyterhub/pytest-jupyterhub)
 
 ## Description
 
