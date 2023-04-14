@@ -3,7 +3,7 @@
 For detailed changes from the prior release, click on the version number, and
 its link will bring up a GitHub listing of changes. Use `git log` on the command line for details.
 
-## [0.1.0](https://github.com/jupyterhub/pytest-jupyterhub/compare/60e995b618c5aec4a950523dc880a65a031769ab...5f535ddf56b3c0953bfa48c9d8d9ff45734f9417) 2023-04-
+## [0.1.0](https://github.com/jupyterhub/pytest-jupyterhub/compare/0a6ed6d634f8bd9ae294a367fad1757f521f18b1...0.1.0) 2023-04-
 
 First release!
 
