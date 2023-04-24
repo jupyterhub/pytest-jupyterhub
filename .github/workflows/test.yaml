@@ -10,14 +10,14 @@ on:
       - "**.md"
       - "**.rst"
       - ".github/workflows/*"
-      - "!.github/workflows/test.yml"
+      - "!.github/workflows/test.yaml"
   push:
     paths-ignore:
       - "docs/**"
       - "**.md"
       - "**.rst"
       - ".github/workflows/*"
-      - "!.github/workflows/test.yml"
+      - "!.github/workflows/test.yaml"
     branches-ignore:
       - "pre-commit-ci-update-config"
   workflow_dispatch:
@@ -53,7 +53,7 @@ jobs:
       - name: Install Javascript dependencies
         run: |
           npm install
-          npm install -g configurable-http-proxy yarn
+          npm install -g configurable-http-proxy
           npm list
 
       - name: Install Python ${{ matrix.python}}
