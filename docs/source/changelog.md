@@ -3,12 +3,14 @@
 For detailed changes from the prior release, click on the version number, and
 its link will bring up a GitHub listing of changes. Use `git log` on the command line for details.
 
-## [0.1.0](https://github.com/jupyterhub/pytest-jupyterhub/compare/0a6ed6d634f8bd9ae294a367fad1757f521f18b1...0.1.0) 2023-04-
+## [0.1.0](https://github.com/jupyterhub/pytest-jupyterhub/compare/0a6ed6d634f8bd9ae294a367fad1757f521f18b1...0.1.0) 2023-04-XX
 
 First release!
 
 ### Enhancements made
 
+- Setup codecov to track test coverage [#56](https://github.com/jupyterhub/pytest-jupyterhub/pull/56) ([@Sheila-nk](https://github.com/Sheila-nk))
+- Create release workflow file [#48](https://github.com/jupyterhub/pytest-jupyterhub/pull/48) ([@Sheila-nk](https://github.com/Sheila-nk))
 - Refactor fixtures, add some tests for them and run them with GitHub actions [#36](https://github.com/jupyterhub/pytest-jupyterhub/pull/36) ([@Sheila-nk](https://github.com/Sheila-nk))
 - Configure sphinx to extract docstrings [#32](https://github.com/jupyterhub/pytest-jupyterhub/pull/32) ([@Sheila-nk](https://github.com/Sheila-nk))
 - make all plugin fixtures async [#31](https://github.com/jupyterhub/pytest-jupyterhub/pull/31) ([@Sheila-nk](https://github.com/Sheila-nk))
@@ -29,6 +31,10 @@ First release!
 
 ### Documentation improvements
 
+- Add nodejs install instructions [#54](https://github.com/jupyterhub/pytest-jupyterhub/pull/54) ([@Sheila-nk](https://github.com/Sheila-nk))
+- Add PyPI badge [#53](https://github.com/jupyterhub/pytest-jupyterhub/pull/53) ([@Sheila-nk](https://github.com/Sheila-nk))
+- Add contributing instructions [#44](https://github.com/jupyterhub/pytest-jupyterhub/pull/44) ([@Sheila-nk](https://github.com/Sheila-nk))
+- Update readme with Usage instructions [#39](https://github.com/jupyterhub/pytest-jupyterhub/pull/39) ([@Sheila-nk](https://github.com/Sheila-nk))
 - add summary of JupyterHub MockHub class and App fixture [#12](https://github.com/jupyterhub/pytest-jupyterhub/pull/12) ([@Sheila-nk](https://github.com/Sheila-nk))
 - update the docs directory [#11](https://github.com/jupyterhub/pytest-jupyterhub/pull/11) ([@Sheila-nk](https://github.com/Sheila-nk))
 - add docs directory structure skeleton [#9](https://github.com/jupyterhub/pytest-jupyterhub/pull/9) ([@Sheila-nk](https://github.com/Sheila-nk))
@@ -44,6 +50,6 @@ First release!
 
 ### Contributors to this release
 
-([GitHub contributors page for this release](https://github.com/jupyterhub/pytest-jupyterhub/graphs/contributors?from=2022-12-12&to=2023-04-11&type=c))
+([GitHub contributors page for this release](https://github.com/jupyterhub/pytest-jupyterhub/graphs/contributors?from=2022-12-12&to=2023-04-24&type=c))
 
-[@consideRatio](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3AconsideRatio+updated%3A2022-12-12..2023-04-11&type=Issues) | [@GeorgianaElena](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3AGeorgianaElena+updated%3A2022-12-12..2023-04-11&type=Issues) | [@minrk](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3Aminrk+updated%3A2022-12-12..2023-04-11&type=Issues) | [@Sheila-nk](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3ASheila-nk+updated%3A2022-12-12..2023-04-11&type=Issues)
+[@consideRatio](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3AconsideRatio+updated%3A2022-12-12..2023-04-24&type=Issues) | [@GeorgianaElena](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3AGeorgianaElena+updated%3A2022-12-12..2023-04-24&type=Issues) | [@manics](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3Amanics+updated%3A2022-12-12..2023-04-24&type=Issues) | [@minrk](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3Aminrk+updated%3A2022-12-12..2023-04-24&type=Issues) | [@Sheila-nk](https://github.com/search?q=repo%3Ajupyterhub%2Fpytest-jupyterhub+involves%3ASheila-nk+updated%3A2022-12-12..2023-04-24&type=Issues)
