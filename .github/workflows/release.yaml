@@ -26,6 +26,7 @@ on:
 jobs:
   publish-to-pypi:
     runs-on: ubuntu-22.04
+    environment: release
     permissions:
       # id-token=write is required for pypa/gh-action-pypi-publish, and the PyPI
       # project needs to be configured to trust this workflow.
