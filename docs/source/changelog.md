@@ -25,6 +25,7 @@ First release!
 
 ### Maintenance and upkeep improvements
 
+- Add RELEASE.md, and update release workflow to use PyPI's trusted publisher [#59](https://github.com/jupyterhub/pytest-jupyterhub/pull/59) ([@Sheila-nk](https://github.com/Sheila-nk))
 - dependabot: monthly updates of github actions [#50](https://github.com/jupyterhub/pytest-jupyterhub/pull/50) ([@consideRatio](https://github.com/consideRatio))
 - Create dependabot config file [#43](https://github.com/jupyterhub/pytest-jupyterhub/pull/43) ([@Sheila-nk](https://github.com/Sheila-nk))
 - Add pre-commit config, flake8 config, enable autoflake [#18](https://github.com/jupyterhub/pytest-jupyterhub/pull/18) ([@GeorgianaElena](https://github.com/GeorgianaElena))
