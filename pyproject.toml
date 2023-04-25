@@ -110,7 +110,7 @@ norecursedirs = "lib lib64"
 github_url = "https://github.com/jupyterhub/pytest-jupyterhub"
 
 [tool.tbump.version]
-current = "0.0.1.dev0"
+current = "0.1.0"
 regex = '''
     (?P<major>\d+)
     \.
