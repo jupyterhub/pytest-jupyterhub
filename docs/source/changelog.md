@@ -42,10 +42,6 @@ First release!
 
 ### Continuous Integration
 
-- [pre-commit.ci] pre-commit autoupdate [#49](https://github.com/jupyterhub/pytest-jupyterhub/pull/49) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- Add contributing instructions [#44](https://github.com/jupyterhub/pytest-jupyterhub/pull/44) ([@Sheila-nk](https://github.com/Sheila-nk))
-- [pre-commit.ci] pre-commit autoupdate [#42](https://github.com/jupyterhub/pytest-jupyterhub/pull/42) ([@pre-commit-ci](https://github.com/pre-commit-ci))
-- [pre-commit.ci] pre-commit autoupdate [#33](https://github.com/jupyterhub/pytest-jupyterhub/pull/33) ([@pre-commit-ci](https://github.com/pre-commit-ci))
 - pre-commit: bump isort [#29](https://github.com/jupyterhub/pytest-jupyterhub/pull/29) ([@Sheila-nk](https://github.com/Sheila-nk))
 
 ### Contributors to this release
