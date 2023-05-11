@@ -3,7 +3,6 @@ This plugin module will create a lightweight jupyterhub application that
 can be used to test different spawner implementations
 """
 
-import sys
 
 import pytest
 from jupyterhub.tests.mocking import MockHub
@@ -73,20 +72,14 @@ async def hub_app(configured_mockhub_instance):
 
     app = MockHub.instance()
     app.log.handlers = []
-    try:
-        # cleanup stops spawners, proxy, etc.
-        # await app.cleanup()
-
-        # Explicitly close the http server socket to not leek any fds
-        # Also await app.shutdown_cancel_tasks()
-        # Note that this is equivalent to the app.stop() function
-        # Explicitly cleaning up resources like this, removes the need to depend
-        # on the io_loop fixture to make sure the cleanup happens before the io_loop is closed.
-        # ref https://github.com/jupyterhub/jupyterhub/blob/c9d52ce6ffd255c26b6ecd396a81583a7250c53b/jupyterhub/app.py#L3356-L3358
-        if app.http_server:
-            app.http_server.stop()
-        await app.shutdown_cancel_tasks()
-    except Exception as e:
-        print("Error stopping Hub: %s" % e, file=sys.stderr)
+    # Explicitly close the http server socket to not leek any fds
+    # Also await app.shutdown_cancel_tasks()
+    # Note that this is equivalent to the app.stop() function
+    # Explicitly cleaning up resources like this, removes the need to depend
+    # on the io_loop fixture to make sure the cleanup happens before the io_loop is closed.
+    # ref https://github.com/jupyterhub/jupyterhub/blob/c9d52ce6ffd255c26b6ecd396a81583a7250c53b/jupyterhub/app.py#L3356-L3358
+    if app.http_server:
+        app.http_server.stop()
+    await app.shutdown_cancel_tasks(sig=None)
 
     MockHub.clear_instance()
