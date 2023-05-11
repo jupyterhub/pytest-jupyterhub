@@ -3,6 +3,7 @@ This plugin module will create a lightweight jupyterhub application that
 can be used to test different spawner implementations
 """
 
+import signal
 
 import pytest
 from jupyterhub.tests.mocking import MockHub
@@ -80,6 +81,6 @@ async def hub_app(configured_mockhub_instance):
     # ref https://github.com/jupyterhub/jupyterhub/blob/c9d52ce6ffd255c26b6ecd396a81583a7250c53b/jupyterhub/app.py#L3356-L3358
     if app.http_server:
         app.http_server.stop()
-    await app.shutdown_cancel_tasks(sig=None)
+    await app.shutdown_cancel_tasks(sig=signal.SIGTERM)
 
     MockHub.clear_instance()
