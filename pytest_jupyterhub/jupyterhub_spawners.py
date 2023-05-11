@@ -1,4 +1,4 @@
-""" 
+"""
 This plugin module will create a lightweight jupyterhub application that
 can be used to test different spawner implementations
 """
@@ -74,6 +74,9 @@ async def hub_app(configured_mockhub_instance):
     app = MockHub.instance()
     app.log.handlers = []
     try:
+        # cleanup stops spawners, proxy, etc.
+        await app.cleanup()
+
         # Explicitly close the http server socket to not leek any fds
         # Also await app.shutdown_cancel_tasks()
         # Note that this is equivalent to the app.stop() function
