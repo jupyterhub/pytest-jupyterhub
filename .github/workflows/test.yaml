@@ -36,9 +36,13 @@ jobs:
       matrix:
         include:
           - python: "3.8"
+            jupyterhub: "2.0"
           - python: "3.9"
+            jupyterhub: "2"
           - python: "3.10"
+            jupyterhub: "3"
           - python: "3.11"
+            jupyterhub: "4"
 
     steps:
       - uses: actions/checkout@v3
@@ -64,7 +68,7 @@ jobs:
       - name: Install Python dependencies
         run: |
           pip install --upgrade pip
-          pip install -e ".[test]"
+          pip install -e ".[test]" jupyterhub=="${{ matrix.jupyterhub }}.*"
           pip freeze
 
       - name: Run the tests

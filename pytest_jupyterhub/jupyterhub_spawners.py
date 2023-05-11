@@ -75,7 +75,7 @@ async def hub_app(configured_mockhub_instance):
     app.log.handlers = []
     try:
         # cleanup stops spawners, proxy, etc.
-        await app.cleanup()
+        # await app.cleanup()
 
         # Explicitly close the http server socket to not leek any fds
         # Also await app.shutdown_cancel_tasks()
