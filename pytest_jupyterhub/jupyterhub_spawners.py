@@ -20,6 +20,7 @@ async def configured_mockhub_instance():
     More about factory fixtures at https://docs.pytest.org/en/latest/how-to/fixtures.html#factories-as-fixtures
 
     It should be called like:
+
     .. code-block:: python
 
         def my_test(configured_mockhub_instance):
@@ -49,6 +50,7 @@ async def hub_app(configured_mockhub_instance):
     More about factory fixtures at https://docs.pytest.org/en/latest/how-to/fixtures.html#factories-as-fixtures
 
     It should be called like:
+
     .. code-block:: python
 
         async def my_test(hub_app):
