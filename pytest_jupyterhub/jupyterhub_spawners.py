@@ -75,7 +75,7 @@ async def hub_app(configured_mockhub_instance):
 
     app = MockHub.instance()
     app.log.handlers = []
-    # Explicitly close the http server socket to not leek any fds
+    # Explicitly close the http server socket to not leak any fds
     # Also await app.shutdown_cancel_tasks()
     # Note that this is equivalent to the app.stop() function
     # Explicitly cleaning up resources like this, removes the need to depend
