@@ -76,4 +76,4 @@ jobs:
           pytest -v --cov=pytest_jupyterhub tests
 
       - name: Submit codecov report
-        uses: codecov/codecov-action@v4
+        uses: codecov/codecov-action@v5
