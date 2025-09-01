@@ -14,7 +14,6 @@ These are the instructions on how to make a release.
    continue to step 2 **only when its merged.**
 
    Tips about getting the most out of github-activity (from https://github.com/jupyterhub/team-compass/issues/563):
-
    - [ ] Run `github-activity --heading-level=3`
    - [ ] Consider labelling PRs:
      - Read the output of `github-activity` and look for PRs under the uncategorized heading
