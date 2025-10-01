@@ -45,7 +45,7 @@ jobs:
             jupyterhub: "4"
 
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v5
       # NOTE: actions/setup-python@v5 make use of a cache within the GitHub base
       #       environment and setup in a fraction of a second.
 
