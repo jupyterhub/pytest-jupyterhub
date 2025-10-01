@@ -50,7 +50,7 @@ jobs:
       #       environment and setup in a fraction of a second.
 
       - name: Install Node v14
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v5
         with:
           node-version: "14"
 
